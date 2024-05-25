@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exp2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Pacifico&family=Yellowtail&display=swap" rel="stylesheet">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- button ink -->
+        <title>Document</title>
+    <!-- <script src="exp.js"></script> -->
+</head>
+<body style="background-color: rgba(34, 31, 31, 0.088);">
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="./home.html"><img src="./images/logo.png" alt="Delixio"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./home.html">Home</a></li>
+                <li class="dropdown1">
+                    <a href="#" class="dropbtn1">Menu</a>
+                    <div class="dropdown-content1">
+                        <a class="drop" href="./menu.html"><i class="fas fa-list"></i>View Menu</a>
+                        <a  class="drop" href="./Shop.html"><i class="fas fa-star"></i>Today's Special</a>
+                    </div>
+                </li>
+                <li><a href="./AboutUs.html">About Us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./Journal.html">Journal</a></li>
+            </ul>
+            <div class="cart-wrapper">
+                <!-- <button class="cart-btn" onclick="showCart()">
+                    <img src="./images/shopping-cart1.png"/>
+                </button>
+                <div class="total-quantity" id="totalQuantityDisplay"></div> -->
+            </div>
+            <button class="reservation-btn"><a href="./Reservation.html">Reservation</a></button>
+            <div class="profile-icon">
+                <div class="dropdown">
+                    <button class="dropbtn"><img src="./images/profile.png" alt=""></button>
+                    <div class="dropdown-content">
+                        <a href="./profile.html"><i class="fas fa-user"></i>View Profile</a>
+                        <a href="./login.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    
+    <div class="image-container"></div>
+    </header>
+    
+
+    <div id="cart-page">
+        <h2>My Cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will be displayed here -->
+          
+        </div>
+        <div class="payment">
+         <div class="payment-price">
+           <p class="main-price"><strong>Total Price: </strong><span id="total-price"></span></p>
+         </div>
+         <div class="payment-button">
+         <a href="checkout.html">
+            <button>Proceed To Checkout</button>
+         </a>
+
+         </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showCartPage() {
+            
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+          
+            var cartPage = document.getElementById('cart-page');
+          
+            var cartItemsContainer = document.getElementById('cart-items');
+          
+            var totalCostElement = document.getElementById('total-price');
+        
+            cartItemsContainer.innerHTML = '';
+            var totalCost = 0;
+    
+            if (cartItems.length > 0) {
+                cartItems.forEach(function(item, index) {
+                    var cartItemElement = document.createElement('div');
+                    cartItemElement.innerHTML = `
+                    
+                        <div class="cart-page-boxes">
+                            <div class="cart-container-full">
+                            <div class="cart-details-image">
+                                <img src="${item.image}" alt="${item.name}" width="100">   
+                            </div>
+                           
+                            <div class="cart-details-text">
+                                <p class="name">${item.name}</p>   
+                                <p>Cost: ${item.quantity * item.price} INR</p>
+                            </div>
+                            <div class="cart-details-quantity">
+                                    <p>Quantity: <span id="quantity-${index}">${item.quantity}</span>
+                                        <button onclick="updateQuantity(${index}, 1)">+</button>
+                                        <button onclick="updateQuantity(${index}, -1)">-</button>
+                                    </p>
+                                <a class="remove-btn" href="#"role="button" onclick="deleteItem(${index})">
+                                   <span>remove</span>
+                                  <div class="icon">
+                                    <i class="fa fa-remove"></i>
+                                    
+                                </div>
+                              </a>
+                            </div>
+                      </div>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(cartItemElement);
+                  
+                    totalCost += item.quantity * item.price;
+                });
+          
+                cartPage.style.display = 'block';
+            } else {
+
+                // cartPage.style.display = 'none';
+                cartPage.innerHTML=`
+            
+                <style>
+
+
+.container {
+    width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #a099997a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.cart {
+    text-align: center;
+}
+
+.cart p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cart a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cart a:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+
+    <div class="container">
+        <h1>Your Cart</h1>
+        <div class="cart">
+            <p>Your cart is currently empty.</p>
+            <a href="./menu.html">Continue Shopping</a>
+        </div>
+    </div>
+                `
+            }
+    
+    
+            totalCostElement.textContent = totalCost + ' INR';
+        }
+    
+        function updateQuantity(index, change) {
+        
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        
+            cartItems[index].quantity += change;
+            if (cartItems[index].quantity < 1) {
+                cartItems.splice(index, 1);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+  
+            showCartPage();
+        }
+    
+        function deleteItem(index) {
+
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            cartItems.splice(index, 1);
+            
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+          
+            showCartPage();
+        }
+    
+        
+        window.onload = showCartPage;
+    </script>
+
+<script>
+function updateCartQuantity() {
+    
+    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    var cartQuantityElement = document.getElementById('cartQuantity');
+    
+    var totalQuantity = 0;
+
+  
+    cartItems.forEach(function(item) {
+        totalQuantity += item.quantity;
+    });
+
+    
+    cartQuantityElement.textContent = totalQuantity;
+}
+
+document.getElementById('cartIcon').addEventListener('click', function() {
+    updateCartQuantity();
+});
+function updateCartState() {
+    var cartChangeEvent = new Event('cartChange');
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    window.dispatchEvent(new Event('cartChange'));
+}
+</script>
+
+<section class="footer-main">
+    <footer class="footer">
+
+        <div class="about-us-container">
+    
+            <div class="about-us-text">
+    
+                <div class="about-firstcolumn">
+                    <h2>Our Facilities</h2>
+                    <ul>
+                        <li>
+                            <a href="./home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="./AboutUs.html">About</a>
+                        </li>
+                        <li>
+                            <a href="./menu.html">Menu</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="./Journal.html">Journal</a>
+                        </li>
+                        <li>
+                            <a href="./Reservation.html">Reservation</a>
+                        </li>
+        
+                    </ul>
+                </div>
+    
+                <div class="about-secondcolumn">
+                    <a href="./home.html" class="logo">
+                        <img src="./images/logo.png" height="200px" alt="Delixio" class="logo-light">
+                    </a>
+                </div>
+    
+                <div class="about-thirdcolumn">
+        
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-mobile"></i>&emsp;
+                            <span>Phone:</span>
+                            &emsp;+919876543210
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>&emsp;
+                            <span>Landline:</span>
+                            &emsp;(011)-2xxx-xxxx
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>&emsp;
+                            <span>Email:</span>
+                            &emsp;dishdiary123@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            
+            </div> 
+    
+            <div class="follow-icons">
+                    <div class="about-icon-container">
+                        <ul>
+                            <li class="instagram"><i class="fa-brands fa-instagram icon1 icon"></i></li>
+                            <li class="twitter"><i class="fa-brands fa-twitter icon2 icon"></i></li>
+                            <li class="youtube"><i class="fa-brands fa-youtube icon3 icon"></i></li>
+                            <li class="facebook"><i class="fa-brands fa-facebook icon4 icon"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+            
+    
+        </div>
+    
+    </footer>
+
+</section>
+
+    
+</body>
+</html>

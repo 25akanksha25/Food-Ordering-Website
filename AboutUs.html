@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website</title>
+<link rel="stylesheet" href="AboutUs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="./home.html"><img src="./images/logo.png" alt="Delixio"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./home.html">Home</a></li>
+            <li class="dropdown1">
+                <a href="#" class="dropbtn1">Menu</a>
+                <div class="dropdown-content1">
+                    <a class="drop" href="./menu.html"><i class="fas fa-list"></i>View Menu</a>
+                    <a  class="drop" href="./Shop.html"><i class="fas fa-star"></i>Today's Special</a>
+                </div>
+            </li>
+            <li><a href="./AboutUs.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./Journal.html">Journal</a></li>
+        </ul>
+        <div class="cart-wrapper">
+            <button class="cart-btn" onclick="showCart()">
+                <img src="./images/shopping-cart1.png"/>
+            </button>
+            <div class="total-quantity" id="totalQuantityDisplay"></div>
+        </div>
+        <button class="reservation-btn"><a href="./Reservation.html">Reservation</a></button>
+        <div class="profile-icon">
+            <div class="dropdown">
+                <button class="dropbtn"><img src="./images/profile.png" alt=""></button>
+                <div class="dropdown-content">
+                    <a href="./profile.html"><i class="fas fa-user"></i>View Profile</a>
+                    <a href="./login.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+</header>
+
+<div class="iamge-container">
+    <!-- <video autoplay loop muted plays-inline class="background-clip">
+        <source src="./images/about-video.mp4"  type="video/mp4">
+    </video> -->
+</div>
+
+
+    <div class="container">
+        <div class="big-image-container">
+            <img src="./images/gallery-6.png" alt="Chef preparing dish">
+        </div>
+        <div class="small-images-container">
+            <div class="small-image">
+                <img src="./images/aboutus-1.jpg" alt="Wine glasses">
+            </div>
+            <div class="small-image">
+                <img src="./images/aboutus-2.jpg" alt="Restaurant interior">
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>"Discover Delixio: Where Every Bite Tells a Story"</h1>
+            <p>Welcome to Delixio! We're a culinary haven where flavors come alive and memories are made. From our carefully crafted menu to our inviting ambiance, every visit to Delixio promises an unforgettable dining experience. Join us as we redefine the art of deliciousness, one dish at a time.</p>
+            <p>Delixio is more than just a restaurant—it's a celebration of food and community. With a commitment to excellence in both flavor and service, we invite you to indulge in the magic of Delixio and savor every moment shared around our table.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="team">
+        <h1>Our<span>Team</span></h1>
+
+        <div class="team_box">
+            <div class="profile">
+                <img src="./images/chef1.jpeg">
+
+                <div class="info">
+                    <h2 class="name">Chef Sanjeev Kapoor</h2>
+                    <p class="bio">"Crafting culinary masterpieces with love and passion."</p>
+
+
+                    <div class="team_icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="./images/chef2.jpeg">
+
+                <div class="info">
+                    <h2 class="name">Chef Vikas Khanna</h2>
+                    <p class="bio">"Bringing a symphony of flavors to every plate."</p>
+
+
+                    <div class="team_icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="./images/chef3.jpeg">
+
+                <div class="info">
+                    <h2 class="name">Chef Maneet Chauhan</h2>
+                    <p class="bio">"Infusing creativity and innovation into every dish."</p>
+
+
+                    <div class="team_icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="./images/chef4.jpeg">
+
+                <div class="info">
+                    <h2 class="name">Chef Garima Arora</h2>
+                    <p class="bio">"Elevating taste to an art form with every creation.".</p>
+
+
+                    <div class="team_icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>Restaurant Amenities</h1>
+        <div class="divider"></div>
+    </div>
+    <div class="features">
+        <div class="feature">
+            <img src="images/fresh-dishes-icon.jpg" alt="Fresh Dishes">
+            <h3>Fresh Dishes</h3>
+            <p>Our dishes are prepared daily with the freshest ingredients to ensure the highest quality and taste. We source locally to bring you the best of what the season has to offer.</p>
+        </div>
+        <div class="feature">
+            <img src="images/various-menu-icon.jpg" alt="Various Menu">
+            <h3>Various Menu</h3>
+            <p>We offer a diverse menu that caters to all tastes and dietary needs. From vegan and gluten-free options to classic comfort foods, there's something for everyone.</p>
+        </div>
+        <div class="feature">
+            <img src="images/well-service-icon.jpg" alt="Well Service">
+            <h3>Well Service</h3>
+            <p>Our staff is dedicated to providing exceptional service to make your dining experience memorable. We pride ourselves on our friendly and attentive service.</p>
+        </div>
+        <div class="feature">
+            <img src="images/fast-delivery-icon.jpg" alt="Fast Delivery">
+            <h3>Fast Delivery</h3>
+            <p>Enjoy your favorite dishes from the comfort of your home with our fast and reliable delivery service. We ensure that your food arrives hot and fresh, every time.</p>
+        </div>
+    </div>
+
+    <div id="gallery-heading"><h1>A Book Of Memories</h1></div>
+
+    <div class="book">
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
+        <input type="checkbox" id="c8">
+        <div id="cover"><img src="./images/about-book1.jpg"></div>
+        <div class="flip-book">
+            <div class="flip" id="p1">
+                <div class="back">
+                    <img src="./images/about-book2.jpg">
+                    <label class="back-btn" for="c1">back</label>
+                </div>
+                <div class="front">
+                    <h2>INTRODUCTION</h2>
+                    <p>Welcome to the Book of Memories, a heartfelt collection of stories,
+                       photos, and moments that celebrate the vibrant history of DELIXIO. 
+                       Since our doors first opened, we've been more than just a place to 
+                       dine—we've been a part of countless celebrations, milestones, and everyday joys.
+                    </p>
+                    <label class="next-btn" for="c1">next</label>
+                </div>
+            </div>
+            <div class="flip" id="p2">
+                <div class="back">
+                    <img src="./images/gallery-4.png">
+                    <label class="back-btn" for="c2">back</label>
+                </div>
+                <div class="front">
+                    <h2>OUR FOUNDING STORY</h2>
+                    <p>In 2005, Maria and Luigi opened Delixio with a simple dream: to bring the authentic flavors of their Italian hometown to our community. Their dedication to quality ingredients and traditional recipes quickly won the hearts of our patrons. From the first handmade pasta to today's gourmet pizzas, our journey has been one of passion and commitment to culinary excellence.</p>
+                    <label class="next-btn" for="c2">next</label>
+                </div>
+            </div>
+            <div class="flip" id="p3">
+                <div class="back">
+                    <img src="./images/about-book3.jpg">
+                    <label class="back-btn" for="c3">back</label>
+                </div>
+                <div class="front">
+                    <h2>MEMORABLE EVENTS</h2>
+                    <p>Over the years, Delixio has been the backdrop for many memorable moments. From joyous weddings to heartfelt anniversaries, our restaurant has been a place where memories are made. One unforgettable event was the surprise proposal of Mark and Lisa in 2018, which brought tears of joy to everyone present.</p>
+                    <label class="next-btn" for="c3">next</label>
+                </div>
+            </div>
+            <div class="flip" id="p4">
+                <div class="back">
+                    <img src="./images/gallery-6.png">
+                    <label class="back-btn" for="c4">back</label>
+                </div>
+                <div class="front">
+                    <h2>CUSTOMER STORIES</h2>
+                    <p>We cherish the stories our patrons share. Here's one from Sarah and Tom: "Delixio has been our go-to spot for over a decade. Our first date was here, and so was our 10th anniversary. The staff always makes us feel like family, and the food never disappoints. It's more than just a restaurant to us—it's where our love story continues to unfold."</p>
+                    <label class="next-btn" for="c4">next</label>
+                </div>
+            </div>
+            <div class="flip" id="p5">
+                <div class="back">
+                    <img src="./images/gallery-8.png">
+                    <label class="back-btn" for="c5">back</label>
+                </div>
+                <div class="front">
+                    <h2>SPECIAL RECIPES</h2>
+                    <p>Many of our dishes hold special places in the hearts of our customers. We're excited to share the recipe for our famous Grandma's Secret Lasagna, a dish that brings comfort and joy to all who taste it. It's the perfect way to bring a piece of Delixio into your home.</p>
+                    <label class="next-btn" for="c5">next</label>
+                </div>
+            </div>
+            <div class="flip" id="p6">
+                <div class="back">
+                    <img src="./images/gallery-9.png">
+                    <label class="back-btn" for="c6">back</label>
+                </div>
+                <div class="front">
+                    <h2>EMPLOYEE HIGHLIGHTS</h2>
+                    <p>Our team is the heart and soul of Delixio. Meet Chef Antonio, our head chef, who has been with us since day one. Known for his incredible culinary skills and warm personality, Chef Antonio has created many of the beloved dishes on our menu. His dedication and passion for cooking inspire us all.</p>
+                    <label class="next-btn" for="c6">next</label>
+                </div>
+            </div>
+            <div class="flip" id="p7">
+                <div class="back">
+                    <img src="./images/gallery-7.png">
+                    <label class="back-btn" for="c7">back</label>
+                </div>
+                <div class="front">
+                    <h2>PHOTO GALLERY</h2>
+                    <p>A picture is worth a thousand words. Browse through our photo gallery to see some of the memorable moments captured at Delixio. From bustling dinner services to intimate celebrations, these photos showcase the joy and connection that our restaurant brings to so many.</p>
+                    <label class="next-btn" for="c7">next</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="footer-main">
+        <footer class="footer">
+    
+            <div class="about-us-container">
+        
+                <div class="about-us-text">
+        
+                    <div class="about-firstcolumn">
+                        <h2>Our Facilities</h2>
+                        <ul>
+                            <li>
+                                <a href="./home.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="./AboutUs.html">About</a>
+                            </li>
+                            <li>
+                                <a href="./menu.html">Menu</a>
+                            </li>
+                            <li>
+                                <a href="./contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="./Journal.html">Journal</a>
+                            </li>
+                            <li>
+                                <a href="./Reservation.html">Reservation</a>
+                            </li>
+            
+                        </ul>
+                    </div>
+        
+                    <div class="about-secondcolumn">
+                        <a href="./home.html" class="logo">
+                            <img src="./images/logo.png" height="200px" alt="Delixio" class="logo-light">
+                        </a>
+                    </div>
+        
+                    <div class="about-thirdcolumn">
+            
+                        <h2>Contact Us</h2>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-mobile"></i>&emsp;
+                                <span>Phone:</span>
+                                &emsp;+919876543210
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>&emsp;
+                                <span>Landline:</span>
+                                &emsp;(011)-2xxx-xxxx
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>&emsp;
+                                <span>Email:</span>
+                                &emsp;dishdiary123@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                
+                </div> 
+        
+                <div class="follow-icons">
+                        <div class="about-icon-container">
+                            <ul>
+                                <li class="instagram"><i class="fa-brands fa-instagram icon1 icon"></i></li>
+                                <li class="twitter"><i class="fa-brands fa-twitter icon2 icon"></i></li>
+                                <li class="youtube"><i class="fa-brands fa-youtube icon3 icon"></i></li>
+                                <li class="facebook"><i class="fa-brands fa-facebook icon4 icon"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                
+        
+            </div>
+        
+        </footer>
+    
+    </section>
+
+
+<script src="script.js"></script>
+<script>
+    function showCart() {
+      // Redirect to the desired page
+      window.location.href = "exp2.html";
+    }
+  
+  </script>
+  <script>
+    window.onload = function() {
+        updateTotalQuantity();
+    };
+    // Function to add product to cart
+    function addToCart(itemName, itemImage, itemPrice) {
+        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  
+        var existingItemIndex = cartItems.findIndex(item => item.name === itemName);
+        if (existingItemIndex !== -1) {
+            cartItems[existingItemIndex].quantity++;
+        } else {
+            cartItems.push({ name: itemName, quantity: 1, image: itemImage, price:itemPrice });
+        }
+  
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        updateTotalQuantity();
+  
+    }
+
+    function updateTotalQuantity() {
+    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    var totalQuantity = 0;
+    for (var i = 0; i < cartItems.length; i++) {
+        totalQuantity += cartItems[i].quantity;
+    }
+    // Assuming you have a DOM element with id 'totalQuantityDisplay' to display the total quantity
+    document.getElementById('totalQuantityDisplay').innerText = totalQuantity;
+}
+  
+    </script>
+</body>
+</html>

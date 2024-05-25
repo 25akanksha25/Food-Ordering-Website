@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ------------------------------ */
+body
+{
+    background-image: url(./images/background-food.jpg);
+
+}
+.container {
+    margin-top: 100px;
+    text-align: center;
+    /* background-image: url(./images/background-food.jpg); */
+    margin-bottom: 120px;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.error-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10em;
+    color: #b8860b;
+}
+
+.digit {
+    display: inline-block;
+    font-size: 6cm;
+}
+
+.image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #b8860b;
+    border: 2px solid #b8860b;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.7em;
+}
+
+.home-button:hover {
+    background-color: #b8860b;
+    color: #fff;
+}
+

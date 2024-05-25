@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home page</title>
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body> 
+
+    <nav>
+    <div class="logo">
+        <a href="./home.html"><img src="./images/logo.png" alt="Delixio"></a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="./home.html">Home</a></li>
+        <li class="dropdown1">
+            <a href="#" class="dropbtn1">Menu</a>
+            <div class="dropdown-content1">
+                <a class="drop" href="./menu.html"><i class="fas fa-list"></i>View Menu</a>
+                <a  class="drop" href="./Shop.html"><i class="fas fa-star"></i>Today's Special</a>
+            </div>
+        </li>
+        <li><a href="./AboutUs.html">About Us</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./Journal.html">Journal</a></li>
+    </ul>
+    <div class="cart-wrapper">
+        <button class="cart-btn" onclick="showCart()">
+            <img src="./images/shopping-cart1.png"/>
+        </button>
+        <div class="total-quantity" id="totalQuantityDisplay"></div>
+    </div>
+    <button class="reservation-btn"><a href="./Reservation.html">Reservation</a></button>
+    <div class="profile-icon">
+        <div class="dropdown">
+            <button class="dropbtn"><img src="./images/profile.png" alt=""></button>
+            <div class="dropdown-content">
+                <a href="./profile.html"><i class="fas fa-user"></i>View Profile</a>
+                <a href="./login.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="image-container"></div>
+
+<section id="temp">
+   <div id="animation">
+    <img src="./images/Add a heading.gif" alt="" id="gif" width="800px" height="500px">
+   </div>
+</section>
+<section class="welcome-section">
+
+    <div class="welcome-image-and-text">
+        <div class="welcome-text">
+            <div class="aboutPara">
+                <h1>Welcome To The La Boom</h1>
+                <p>Welcome to Delixio, where culinary excellence meets warm hospitality.
+                    Delixio is more than just a restaurant—it's a destination for food lovers and seekers of memorable experiences.
+                    Our passion for exquisite flavors and impeccable service is evident in every aspect of our establishment.
+                    From the carefully curated menu showcasing a fusion of global cuisines to the cozy yet elegant ambiance that sets the stage for unforgettable moments,
+                    Delixio is committed to creating a dining journey unlike any other. 
+                    Whether you're indulging in a romantic dinner for two or gathering with friends and family to celebrate life's special moments, 
+                    we invite you to savor the magic of Delixio and make memories that linger long after the last bite.</p>
+            </div>
+            <button class="learnMore"><a href="./AboutUs.html">Learn More</a></button>
+        </div>
+        
+        <div class="welcome-image">
+            <div class="about1">
+                <img src="./images/gallery-4.png" alt="Dish" id="welcome-img1">
+                <img src="./images/gallery-2.png" alt="Dish" id="welcome-img2">
+            </div>
+            <div class="about2">
+                <img src="./images/gallery-7.png" alt="Interior" id="welcome-img3">
+                <img src="./images/gallery-8.png" alt="Interior" id="welcome-img4">
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="Popular-Items">
+    <div class="review-container">
+        <h1 id="heading">Delixio's Popular Items List</h1>
+        <div class="Slideshow">
+            <div class="slideshow-part">
+                <div class="slider-image-container">
+                    <div class="image">
+                        <img src="./images/spagetti.jpg" alt="spaghetti">
+                    </div>
+                    <div class="review">
+                        <div class="reviewbox">
+                            <div class="review-star">
+                                <span class="star" style="margin-left: 120px;">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h1><I>Spaghetti</I></h1>
+                            <h3>Price:Rs 200</h3>
+                            <p>It is a long established fact that a reader will be distracted.</p>
+                            <button class="addSlide" onclick="addToCart('Spaghetti', './images/spagetti.jpg',200)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image-container">
+                    <div class="image">
+                        <img src="./images/pasta.jpg" alt="Pasta">
+                    </div>
+                    <div class="review">
+                        <div class="reviewbox">
+                            <div class="review-star">
+                                <span class="star"style="margin-left: 120px;">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h1><I>Pasta</I></h1>
+                            <h3>Price:Rs 400</h3>
+                            <p>It is a long established fact that a reader will be distracted.</p>
+                            <button class="addSlide" onclick="addToCart('Pasta', './images/pasta.jpg',400)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image-container">
+                    <div class="image">
+                        <img src="./images/biryani.jpg" alt="Biryani">
+                    </div>
+                    <div class="review">
+                        <div class="reviewbox">
+                            <div class="review-star">
+                                <span class="star"style="margin-left: 120px;">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h1><I>Biryani</I></h1>
+                            <h3>Price:Rs 200</h3>
+                            <p>It is a long established fact that a reader will be distracted.</p>
+                            <button class="addSlide" onclick="addToCart('Biryani', './images/biryani.jpg',200)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slideshow-part">
+                <div class="slider-image-container">
+                    <div class="image">
+                        <img src="./images/manchurian.jpg" alt="Manchurian">
+                    </div>
+                    <div class="review">
+                        <div class="reviewbox">
+                            <div class="review-star">
+                                <span class="star" style="margin-left: 120px;">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h1><I>Manchurian</I></h1>
+                            <h3>Price:Rs 210</h3>
+                            <p>It is a long established fact that a reader will be distracted.</p>
+                            <button class="addSlide" onclick="addToCart('Manchurian', './images/manchurian.jpg',210)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image-container">
+                    <div class="image">
+                        <img src="./images/gajarkahalwa.jpg" alt="Gajar Halwa">
+                    </div>
+                    <div class="review">
+                        <div class="reviewbox">
+                            <div class="review-star">
+                                <span class="star"style="margin-left: 120px;">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h1><I>Gajar Halwa</I></h1>
+                            <h3>Price:Rs 100</h3>
+                            <p>It is a long established fact that a reader will be distracted.</p>
+                            <button class="addSlide" onclick="addToCart('Gajar Halwa', './images/gajarkahalwa.jpg',100)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image-container">
+                    <div class="image">
+                        <img src="./images/dosa.jpg" alt="Dosa">
+                    </div>
+                    <div class="review">
+                        <div class="reviewbox">
+                            <div class="review-star">
+                                <span class="star"style="margin-left: 120px;">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h1><I>Dosa</I></h1>
+                            <h3>Price:Rs 200</h3>
+                            <p>It is a long established fact that a reader will be distracted.</p>
+                            <button class="addSlide" onclick="addToCart('Dosa', './images/dosa.jpg',200)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slideshow-part">
+                <div class="slider-image-container">
+                    <div class="image">
+                        <img src="./images/channamasala.jpg" alt="Channa Masala">
+                    </div>
+                    <div class="review">
+                        <div class="reviewbox">
+                            <div class="review-star">
+                                <span class="star" style="margin-left: 120px;">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h1><I>Channa Masala</I></h1>
+                            <h3>Price:Rs 180</h3>
+                            <p>It is a long established fact that a reader will be distracted.</p>
+                            <button class="addSlide" onclick="addToCart('Channa Masala', './images/channamasala.jpg',180)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image-container">
+                    <div class="image">
+                        <img src="./images/ramen.jpg" alt="Rame">
+                    </div>
+                    <div class="review">
+                        <div class="reviewbox">
+                            <div class="review-star">
+                                <span class="star"style="margin-left: 120px;">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h1><I>Ramen</I></h1>
+                            <h3>Price:Rs 200</h3>
+                            <p>It is a long established fact that a reader will be distracted.</p>
+                            <button class="addSlide" onclick="addToCart('Ramen', './images/ramen.jpg',200)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image-container">
+                    <div class="image">
+                        <img src="./images/pavbhaji.jpg" alt="Pav Bhaji">
+                    </div>
+                    <div class="review">
+                        <div class="reviewbox">
+                            <div class="review-star">
+                                <span class="star"style="margin-left: 120px;">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h1><I>Pav Bhaji</I></h1>
+                            <h3>Price:Rs 150</h3>
+                            <p>It is a long established fact that a reader will be distracted.</p>
+                            <button class="addSlide" onclick="addToCart('Pav Bhaji', './images/pavbhaji.jpg',150)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Add more slider-image-container divs as needed -->
+    
+        </div>
+        <div class="slider-controls">
+            <!-- <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button> -->
+            <input type="radio" name="slideshow-part" id="part1" checked>
+            <label for="part1"></label>
+            <input type="radio" name="slideshow-part" id="part2">
+            <label for="part2"></label>
+            <input type="radio" name="slideshow-part" id="part3">
+            <label for="part3"></label>
+        </div>
+    </div>
+    
+</section>
+<section class="vouchers">
+    <div class="voucher-background">
+        <h1 id="voucher-main-heading">Choose Your Best Offer</h1>
+    <div class="voucher-main-container">
+        <div class="offer1">
+            <div class="offer-content1">
+              <h1>Choose Your Best Offer</h1>
+              <img src="./images/500image.png" alt="price" class="Price-voucher-image">
+              <p><I>Savor twice the taste with every bite!</I></p>
+              <p>Savor, indulge, repeat - your combo bliss!</p>
+              <h2>Limited Offer</h2>
+              <ul>
+                <li>Prawn with Noodles</li>
+                <li>Special Drinks</li>
+              </ul>
+              <button class="limited-offer-btn" onclick="addToCart('Prawn with Noodles COMBO!!', './images/best-offer-img1.png',500)">Order Now</button>
+            </div>
+            <div class="offer-image1">
+              <img src="./images/best-offer-img1.png" alt="Your Image" >
+            </div>
+          </div>
+          <div class="offer2">
+              <div class="offer-content2">
+                <h1>Choose Your Best Offer</h1>
+                <img src="./images/500image.png" alt="price" class="Price-voucher-image">
+                <p><I>Savor twice the taste with every bite!</I></p>
+                <p>Savor, indulge, repeat - your combo bliss!</p>
+                <h2>Limited Offer</h2>
+                <ul>
+                  <li>Prawn with Veggies</li>
+                  <li>Special Drinks</li>
+                </ul>
+                <button class="limited-offer-btn" onclick="addToCart('Prawn with Veggies COMBO!!', './images/best-offer-img2.png',500)">Order Now</button>
+              </div>
+              <div class="offer-image2">
+                <img src="./images/best-offer-img2.png" alt="Your Image" >
+              </div>
+            </div>
+    </div>
+    </div>
+
+</section>
+
+<section class="feedback">
+    <div class="feedback-main-div">
+        <div class="Feedback-main">
+            <img src="./images/feedback1.jpg" alt="Cristofor Henry" class="profile-pic" onclick="showFeedback(0)">
+            <img src="./images/feedback4.jpg" alt="Cristofor Henry" class="profile-pic" onclick="showFeedback(1)">
+            <img src="./images/feedback3.jpg" alt="Cristofor Henry" class="profile-pic" onclick="showFeedback(2)">
+            <img src="./images/feedback2.jpg" alt="Cristofor Henry" class="profile-pic" onclick="showFeedback(3)">
+            <img src="./images/feedback5.jpg" alt="Cristofor Henry" class="profile-pic" onclick="showFeedback(4)">
+            <img src="./images/feedback6.jpg" alt="Cristofor Henry" class="profile-pic" onclick="showFeedback(5)">
+        </div> 
+        <div class="feedback-container">
+            
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    <p class="name">Isabell</p>
+                    <span class="feedback-star" style="margin-left: 550px;">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <p class="role">Guest</p>
+                    <p class="review-para">"The ambiance at your restaurant is simply enchanting! From the warm lighting to the cozy seating, dining here feels like a delightful escape from the hustle and bustle of everyday life."</p>
+                    <img src="./images/double-quotes_7350738.png" alt="Cristofor Henry" class="Quote-image">
+               
+                </div>
+            </div>  
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    <p class="name">Noah</p>
+                    <span class="feedback-star" style="margin-left: 550px;">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <p class="role">Guest</p>
+                    <p class="review-para">"I must commend your chef for crafting such exquisite dishes. Each bite was a symphony of flavors, expertly balanced and beautifully presented. It's evident that great care and attention to detail go into every dish served here."</p>
+                    <img src="./images/double-quotes_7350738.png" alt="Cristofor Henry" class="Quote-image">
+               
+                </div>
+            </div>  
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    <p class="name">Sophia</p>
+                    <span class="feedback-star" style="margin-left: 550px;">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <p class="role">Guest</p>
+                    <p class="review-para">"The service at your restaurant is impeccable. From the moment we stepped in, we were greeted with genuine warmth and hospitality. The staff were attentive and knowledgeable, making our dining experience truly memorable."</p>
+                    <img src="./images/double-quotes_7350738.png" alt="Cristofor Henry" class="Quote-image">
+               
+                </div>
+            </div>  
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    <p class="name">Ava</p>
+                    <span class="feedback-star" style="margin-left: 550px;">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <p class="role">Guest</p>
+                    <p class="review-para">"I appreciate the emphasis on sourcing local, sustainable ingredients in your menu. Not only does it contribute to the community, but it also enhances the freshness and quality of the dishes. It's refreshing to see a restaurant committed to ethical and responsible practices."</p>
+                    <img src="./images/double-quotes_7350738.png" alt="Cristofor Henry" class="Quote-image">
+                
+                </div>
+            </div>  
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    <p class="name">Lucas</p>
+                    <span class="feedback-star" style="margin-left: 550px;">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <p class="role">Guest</p>
+                    <p class="review-para">"Kudos to your team for accommodating my dietary restrictions with such grace and creativity. Despite my allergies, I was still able to enjoy a delicious meal tailored to my needs. It's rare to find such flexibility and dedication to customer satisfaction."</p>
+                    <img src="./images/double-quotes_7350738.png" alt="Cristofor Henry" class="Quote-image">
+                </div>
+            </div>  
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    <p class="name">Ethan</p>
+                    <span class="feedback-star" style="margin-left: 550px;">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <span class="feedback-star">&#9733;</span>
+                    <p class="role">Guest</p>
+                    <p class="review-para">"The attention to detail in every aspect of the dining experience is commendable. From the elegant table settings to the thoughtful little touches like complimentary bread and amuse-bouche, it's evident that your restaurant strives for perfection in every detail."</p>
+                    <img src="./images/double-quotes_7350738.png" alt="Cristofor Henry" class="Quote-image">   
+                </div>
+            </div> 
+            <div>
+                <div class="header">
+                    <h1>Customer Feedback</h1>
+                    <p>"Your feedback is the compass guiding us through the journey of improvement, shaping a path paved with excellence."</p>
+                </div>
+            </div> 
+        </div>
+        
+    
+    </div>
+</section>
+<section class="gallery">
+    <div class="slider-container" id="sliderContainer">
+        <h1 id="gallery-heading">Delixio's Gallery</h1>
+        <div class="wrapper" id="sliderWrapper">
+          <div class="card">
+            <div class="poster"><img src="./images/gallery-1.png" alt="Location Unknown"></div>
+            <div class="details">
+              <h1>Chefs coooking Delixious Meals</h1>
+            </div>
+          </div>
+          <div class="card">
+              <div class="poster"><img src="./images/gallery-2.png" alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Chefs coooking Delixious Meals</h1>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="./images/gallery-3.png" alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Mushroom Curry</h1>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="./images/gallery-4.png" alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Our Aesthetic Interior</h1>
+                
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="./images/gallery-5.png" alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Tasty Kebabs</h1>
+               
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="./images/gallery-6.png" alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Authentic Food</h1>
+                
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="./images/gallery-7.png" alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Delixio's Peaceful Environment</h1>
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="./images/gallery-8.png" alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Available Wines</h1>
+                
+              </div>
+            </div>
+            <!-- <div class="card">
+              <div class="poster"><img src="." alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Location Unknown</h1>
+                
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="." alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Location Unknown</h1>
+               
+              </div>
+            </div>
+            <div class="card">
+              <div class="poster"><img src="." alt="Location Unknown"></div>
+              <div class="details">
+                <h1>Location Unknown</h1>
+                
+              </div>
+            </div>
+            <div class="card">
+                <div class="poster"><img src="." alt="Location Unknown"></div>
+                <div class="details">
+                  <h1>Location Unknown</h1>
+                  
+                </div>
+            </div> -->
+        </div>
+      </div>  
+</section>
+<section class="footer-main">
+    <footer class="footer">
+
+        <div class="about-us-container">
+    
+            <div class="about-us-text">
+    
+                <div class="about-firstcolumn">
+                    <h2>Our Facilities</h2>
+                    <ul>
+                        <li>
+                            <a href="./home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="./AboutUs.html">About</a>
+                        </li>
+                        <li>
+                            <a href="./menu.html">Menu</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="./Journal.html">Journal</a>
+                        </li>
+                        <li>
+                            <a href="./Reservation.html">Reservation</a>
+                        </li>
+        
+                    </ul>
+                </div>
+    
+                <div class="about-secondcolumn">
+                    <a href="./home.html" class="logo">
+                        <img src="./images/logo.png" height="200px" alt="Delixio" class="logo-light">
+                    </a>
+                </div>
+    
+                <div class="about-thirdcolumn">
+        
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-mobile"></i>&emsp;
+                            <span>Phone:</span>
+                            &emsp;+919876543210
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>&emsp;
+                            <span>Landline:</span>
+                            &emsp;(011)-2xxx-xxxx
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>&emsp;
+                            <span>Email:</span>
+                            &emsp;dishdiary123@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            
+            </div> 
+    
+            <div class="follow-icons">
+                    <div class="about-icon-container">
+                        <ul>
+                            <li class="instagram"><i class="fa-brands fa-instagram icon1 icon"></i></li>
+                            <li class="twitter"><i class="fa-brands fa-twitter icon2 icon"></i></li>
+                            <li class="youtube"><i class="fa-brands fa-youtube icon3 icon"></i></li>
+                            <li class="facebook"><i class="fa-brands fa-facebook icon4 icon"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+            
+    
+        </div>
+    
+    </footer>
+
+</section>
+<script src="home.js">
+</script>
+<script>
+    function showCart() {
+      // Redirect to the desired page
+      window.location.href = "exp2.html";
+    }
+  
+  </script>
+  <script>
+    window.onload = function() {
+        updateTotalQuantity();
+    };
+    // Function to add product to cart
+    function addToCart(itemName, itemImage, itemPrice) {
+        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  
+        var existingItemIndex = cartItems.findIndex(item => item.name === itemName);
+        if (existingItemIndex !== -1) {
+            cartItems[existingItemIndex].quantity++;
+        } else {
+            cartItems.push({ name: itemName, quantity: 1, image: itemImage, price:itemPrice });
+        }
+  
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        updateTotalQuantity();
+  
+    }
+
+    function updateTotalQuantity() {
+    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    var totalQuantity = 0;
+    for (var i = 0; i < cartItems.length; i++) {
+        totalQuantity += cartItems[i].quantity;
+    }
+    // Assuming you have a DOM element with id 'totalQuantityDisplay' to display the total quantity
+    document.getElementById('totalQuantityDisplay').innerText = totalQuantity;
+}
+  
+    </script>
+    
+
+
+
+
+    
+</body>
+</html>
+

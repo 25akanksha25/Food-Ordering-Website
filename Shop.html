@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Shop.css">
+    <title>Today's Special</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="./home.html"><img src="./images/logo.png" alt="Delixio"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./home.html">Home</a></li>
+            <li class="dropdown1">
+                <a href="#" class="dropbtn1">Menu</a>
+                <div class="dropdown-content1">
+                    <a class="drop" href="./menu.html"><i class="fas fa-list"></i>View Menu</a>
+                    <a  class="drop" href="./Shop.html"><i class="fas fa-star"></i>Today's Special</a>
+                </div>
+            </li>
+            <li><a href="./AboutUs.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./Journal.html">Journal</a></li>
+        </ul>
+        <div class="cart-wrapper">
+            <button class="cart-btn" onclick="showCart()">
+                <img src="./images/shopping-cart1.png"/>
+            </button>
+            <div class="total-quantity" id="totalQuantityDisplay"></div>
+        </div>
+        <button class="reservation-btn"><a href="./Reservation.html">Reservation</a></button>
+        <div class="profile-icon">
+            <div class="dropdown">
+                <button class="dropbtn"><img src="./images/profile.png" alt=""></button>
+                <div class="dropdown-content">
+                    <a href="./profile.html"><i class="fas fa-user"></i>View Profile</a>
+                    <a href="./login.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- --------------------------------- Today's Special Menu ------------------------------------------------------------------------------------------------------------------------------------ -->
+    <section class="today-menu">
+        <div class="image-container"></div>
+        <div class="sorter">
+            <div class="sorter-left">
+                <div class="sorter-list">
+                    <button class="filter-button" data-filter="all">All</button>
+                    <button class="filter-button" data-filter="breakfast">Breakfast</button>
+                    <button class="filter-button" data-filter="lunch">Lunch</button>
+                    <button class="filter-button" data-filter="dinner">Dinner</button>
+                    <!-- <div class="sorter-list-view">
+                        <h4>View as:</h4>
+                        <button></button>
+                        <button></button>
+                    </div> -->
+                </div>
+<!-- ------------------------------------------------------BREAKFAST------------------------------------------------------------------------------ -->
+                <div class="sorted-menu">
+                    <div class="menu-card" data-tags="all breakfast">
+                        <div class="img-container">
+                            <img src="./images/desert1.jpg">
+                        </div>
+                        <div class="details">
+                            <button class="add-to-cart" onclick="addToCart('Chocolate Cupcake', './images/desert1.jpg',90)">Add to cart</button>
+                        </div>
+                        <div class="menu-part-content">
+                            <p class="name">Chocolate Cupcake</p>
+                            <p class="price">₹90</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-tags="all breakfast">
+                        <div class="img-container">
+                            <img src="./images/Side-dish-7.jpg">
+                        </div>
+                        <div class="details">
+                            <button class="add-to-cart" onclick="addToCart('Green Salad', './images/Side-dish-7.jpg',120)">Add to cart</button>
+                        </div>
+                        <div class="menu-part-content">
+                            <p class="name">Green Salad</p>
+                            <p class="price">₹120</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-tags="all breakfast drinks">
+                        <div class="img-container">
+                            <img src="./images/drink1.jpg">
+                        </div>
+                        <div class="details">
+                            <button class="add-to-cart" onclick="addToCart('Fresh Juice', './images/drink1.jpg',100)">Add to cart</button>
+                        </div>
+                        <div class="menu-part-content">
+                            <p class="name">Fresh Juice</p>
+                            <p class="price">₹100</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-tags="all breakfast">
+                        <div class="img-container">
+                            <img src="./images/desert5.jpg">
+                        </div>
+                        <div class="details">
+                            <button class="add-to-cart" onclick="addToCart('Waffles', './images/desert5.jpg',200)">Add to cart</button>
+                        </div>
+                        <div class="menu-part-content">
+                            <p class="name">Waffles</p>
+                            <p class="price">₹200</p>
+                        </div>
+                    </div>
+                </div>
+<!-- ---------------------------------------------------------- Lunch & Dinner ------------------------------------------------------------------------>
+                <div class="sorted-menu">
+                    <div class="menu-card" data-tags="all lunch dinner">
+                        <div class="img-container">
+                            <img src="./images/main-dish-1.avif">
+                        </div>
+                        <div class="details">
+                            <button class="add-to-cart" onclick="addToCart('Shahi Panner', './images/main-dish-1.avif',220)">Add to cart</button>
+                        </div>
+                        <div class="menu-part-content">
+                            <p class="name">Shahi Paneer</p>
+                            <p class="price">₹220</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-tags="all lunch dinner">
+                        <div class="img-container">
+                            <img src="./images/main-dish-3.avif">
+                        </div>
+                        <div class="details">
+                            <button class="add-to-cart" onclick="addToCart('Dal Makhni', './images/main-dish-3.avif',250)">Add to cart</button>
+                        </div>
+                        <div class="menu-part-content">
+                            <p class="name">Dal Makhni</p>
+                            <p class="price">₹250</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-tags="all dinner">
+                        <div class="img-container">
+                            <img src="./images/main-dish-7.jpg">
+                        </div>
+                        <div class="details">
+                            <button class="add-to-cart" onclick="addToCart('Chicken Curry', './images/main-dish-7.jpg',240)">Add to cart</button>
+                        </div>
+                        <div class="menu-part-content">
+                            <p class="name">Chicken Curry</p>
+                            <p class="price">₹240</p>
+                        </div>
+                    </div>
+                    <div class="menu-card" data-tags="all lunch dinner">
+                        <div class="img-container">
+                            <img src="./images/main-dish-10.jpg">
+                        </div>
+                        <div class="details">
+                            <button class="add-to-cart" onclick="addToCart('Dal Makhni', './images/main-dish-10.jpg',180)">Add to cart</button>
+                        </div>
+                        <div class="menu-part-content">
+                            <p class="name">Jeera rice</p>
+                            <p class="price">₹180</p>
+                        </div>
+                    </div>
+                </div>                     
+<!-- -------------------------------------------------------- Dinner ------------------------------------------------------------------------------------------>
+                <div class="sorted-menu">
+                    <div class="menu-card" data-tags="all dinner">
+                        <div class="img-container">
+                            <img src="./images/rasmalai.jpg">
+                        </div>
+                        <div class="details">
+                            <button class="add-to-cart" onclick="addToCart('Rasmali', './images/rasmalai.jpg',180)">Add to cart</button>
+                        </div>
+                        <div class="menu-part-content">
+                            <p class="name">Rasmali</p>
+                            <p class="price">₹180</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- ----------------------------------------- OFFERS --------------------------------------->
+            <div class="sorter-right">
+                <div class="offers">
+                    <img src="./images/advertisement-side.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- footer------------------------------------------------------------------------------------- -->
+<section class="footer-main">
+    <footer class="footer">
+
+        <div class="about-us-container">
+    
+            <div class="about-us-text">
+    
+                <div class="about-firstcolumn">
+                    <h2>Our Facilities</h2>
+                    <ul>
+                        <li>
+                            <a href="./home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="./AboutUs.html">About</a>
+                        </li>
+                        <li>
+                            <a href="./menu.html">Menu</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="./Journal.html">Journal</a>
+                        </li>
+                        <li>
+                            <a href="./Reservation.html">Reservation</a>
+                        </li>
+        
+                    </ul>
+                </div>
+    
+                <div class="about-secondcolumn">
+                    <a href="./home.html" class="logo">
+                        <img src="./images/logo.png" height="200px" alt="Delixio" class="logo-light">
+                    </a>
+                </div>
+    
+                <div class="about-thirdcolumn">
+        
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-mobile"></i>&emsp;
+                            <span>Phone:</span>
+                            &emsp;+919876543210
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>&emsp;
+                            <span>Landline:</span>
+                            &emsp;(011)-2xxx-xxxx
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>&emsp;
+                            <span>Email:</span>
+                            &emsp;dishdiary123@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            
+            </div> 
+    
+            <div class="follow-icons">
+                    <div class="about-icon-container">
+                        <ul>
+                            <li class="instagram"><i class="fa-brands fa-instagram icon1 icon"></i></li>
+                            <li class="twitter"><i class="fa-brands fa-twitter icon2 icon"></i></li>
+                            <li class="youtube"><i class="fa-brands fa-youtube icon3 icon"></i></li>
+                            <li class="facebook"><i class="fa-brands fa-facebook icon4 icon"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+            
+    
+        </div>
+    
+    </footer>
+
+</section>
+<!-- ----------------------------------------- Cart for items ---------------------------------------------------------------------------- -->
+    <script src="Shop.js"></script>
+    <script>
+        function showCart() {
+          // Redirect to the desired page
+          window.location.href = "exp2.html";
+        }
+      
+      </script>
+      <script>
+        window.onload = function() {
+            updateTotalQuantity();
+        };
+        // Function to add product to cart
+        function addToCart(itemName, itemImage, itemPrice) {
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+      
+            var existingItemIndex = cartItems.findIndex(item => item.name === itemName);
+            if (existingItemIndex !== -1) {
+                cartItems[existingItemIndex].quantity++;
+            } else {
+                cartItems.push({ name: itemName, quantity: 1, image: itemImage, price:itemPrice });
+            }
+      
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            updateTotalQuantity();
+      
+        }
+    
+        function updateTotalQuantity() {
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            var totalQuantity = 0;
+            for (var i = 0; i < cartItems.length; i++) {
+                totalQuantity += cartItems[i].quantity;
+            }
+            // Assuming you have a DOM element with id 'totalQuantityDisplay' to display the total quantity
+            document.getElementById('totalQuantityDisplay').innerText = totalQuantity;
+        }
+      
+    </script>
+</body>
+</html>

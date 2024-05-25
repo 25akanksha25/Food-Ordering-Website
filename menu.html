@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Menu</title>
+</head>
+<body class="body-fixed">   
+    <nav>
+        <div class="logo">
+            <a href="./home.html"><img src="./images/logo.png" alt="Delixio"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./home.html">Home</a></li>
+            <li class="dropdown1">
+                <a href="#" class="dropbtn1">Menu</a>
+                <div class="dropdown-content1">
+                    <a class="drop" href="./menu.html"><i class="fas fa-list"></i>View Menu</a>
+                    <a  class="drop" href="./Shop.html"><i class="fas fa-star"></i>Today's Special</a>
+                </div>
+            </li>
+            <li><a href="./AboutUs.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./Journal.html">Journal</a></li>
+        </ul>
+        <div class="cart-wrapper">
+            <button class="cart-btn" onclick="showCart()">
+                <img src="./images/shopping-cart1.png"/>
+            </button>
+            <div class="total-quantity" id="totalQuantityDisplay"></div>
+        </div>
+        <button class="reservation-btn"><a href="./Reservation.html">Reservation</a></button>
+        <div class="profile-icon">
+            <div class="dropdown">
+                <button class="dropbtn"><img src="./images/profile.png" alt=""></button>
+                <div class="dropdown-content">
+                    <a href="./profile.html"><i class="fas fa-user"></i>View Profile</a>
+                    <a href="./login.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section menu" aria-label="menu-label" id="menu">
+        <div class="menu-header" id="menu-page">
+            <!-- <h1>Menu</h1> -->
+            <video autoplay loop muted plays-inline class="background-clip">
+                <source src="./images/menu-video3.mp4"  type="video/mp4">
+            </video>
+        </div>
+        <div class="menu">
+            <div class="switcher">
+                <div class="switcher-bar">
+                    <p>Main Course</p>
+                    <label onclick="mainDishToggle" class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <p>Side Dish</p>
+                </div>
+            </div>
+            <div class="menu-part" id="mainDish">
+                <div class="menu-left-part">
+                    <div class="menu-card">
+                        <img src="./images/main-dish-1.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Shahi Paneer</p>
+                                <p class="price">₹220</p>
+                                <button class="add-to-cart" onclick="addToCart('Shahi Paneer', './images/main-dish-1.avif',220)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Shahi paneer is a rich and creamy North Indian dish made with paneer
+                                cooked in a luxurious gravy of cashews, cream, and aromatic spices.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/main-dish-2.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Kadhai Paneer</p>
+                                <p class="price">₹240</p>
+                                <button class="add-to-cart" onclick="addToCart('Kadhai Paneer', './images/main-dish-2.avif',240)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Kadhai paneer is a flavorful North Indian dish featuring paneer
+                                cooked with bell peppers, onions, tomatoes, and a blend of aromatic spices in a
+                                traditional kadhai, resulting in a spicy and tangy gravy.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/main-dish-3.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Dal Makhni</p>
+                                <p class="price">₹250</p>
+                                <button class="add-to-cart" onclick="addToCart('Dal Makhni', './images/main-dish-3.avif',250)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Dal makhni is a popular Punjabi dish made with black lentils (urad
+                                dal) and kidney beans (rajma) simmered in a creamy tomato-based gravy enriched with
+                                butter and cream.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/main-dish-7.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Chicken curry</p>
+                                <p class="price">₹240</p>
+                                <button class="add-to-cart" onclick="addToCart('Chicken Curry', './images/main-dish-7.jpg',240)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Chicken curry is a quintessential Indian dish made with chicken pieces cooked in a flavorful gravy of onions, tomatoes, ginger, garlic, and a blend of spices such as cumin, coriander, turmeric, and chili powder.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/main-dish-8.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Fish Curry</p>
+                                <p class="price">₹240</p>
+                                <button class="add-to-cart" onclick="addToCart('Fish Curry', './images/main-dish-8.jpg',240)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Fish curry is a flavorful dish where fish pieces are simmered in a spicy and tangy gravy made with coconut milk, tomatoes, onions, and a blend of spices such as mustard seeds, fenugreek, and curry leaves.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-right-part">
+                    <div class="menu-card">
+                        <img src="./images/main-dish-4.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Mix Veg</p>
+                                <p class="price">₹220</p>
+                                <button class="add-to-cart" onclick="addToCart('Mix Veg', './images/main-dish-4.avif',220)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Mix veg is a versatile Indian dish made by combining assorted
+                            vegetables such as carrots, peas, beans, cauliflower, and potatoes, cooked in a spiced
+                            gravy or masala, offering a colorful and nutritious medley of flavors and textures.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/main-dish-5.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Channa Masala</p>
+                                <p class="price">₹250</p>
+                                <button class="add-to-cart" onclick="addToCart('Channa Masala', './images/main-dish-5.avif',250)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Chana masala is a classic Indian dish made with chickpeas (chana)
+                                cooked in a rich and flavorful gravy of tomatoes, onions, garlic, ginger, and a blend of
+                                aromatic spices such as cumin, coriander, and garam masala.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/main-dish-6.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Palak Paneer</p>
+                                <p class="price">₹225</p>
+                                <button class="add-to-cart" onclick="addToCart('Palak Paneer', './images/main-dish-6.avif',225)">+</button>
+                            
+                            </div>
+                            <h6 class="description">A creamy and aromatic Indian dish featuring cheese cubes simmered in a vibrant curry.</h6>
+                        </div>                        
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/main-dish-9.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Fried Rice</p>
+                                <p class="price">₹180</p>
+                                <button class="add-to-cart" onclick="addToCart('Fried Rice', './images/main-dish-9.jpg',180)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Fried rice is a versatile and flavorful dish that originated in China but has become popular worldwide, including in Indian cuisine.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/main-dish-10.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Jeera Rice</p>
+                                <p class="price">₹180</p>
+                                <button class="add-to-cart" onclick="addToCart('Jeera Rice', './images/main-dish-10.jpg',180)">+</button>
+                            </div>
+                            <h6 class="description">Jeera rice, also known as cumin rice, is a fragrant and subtly spiced rice dish flavored with cumin seeds and aromatic spices.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-part" id="sideDish" style="display: none;">
+                <div class="menu-left-part">
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-6.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Hakka Noodles</p>
+                                <p class="price">₹170</p>
+                                <button class="add-to-cart" onclick="addToCart('Shin Ramen', './images/Side-dish-6.jpg',170)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Hakka noodles is a popular Indo-Chinese dish made from stir-fried
+                                noodles cooked with assorted vegetables, meats, or seafood, seasoned with soy sauce,
+                                garlic, ginger, and other spices, resulting in a flavorful and satisfying noodle dish
+                                with a hint of Asian flair.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-1.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Dumplings</p>
+                                <p class="price">₹135</p>
+                                <button class="add-to-cart" onclick="addToCart('Dumplings', './images/Side-dish-1.jpg',135)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Dumplings are a traditional dish in many cultures, consisting of dough wrapped around a filling, which can be meat, vegetables, or a combination of both.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-2.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Spring Rolls</p>
+                                <p class="price">₹170</p>
+                                <button class="add-to-cart" onclick="addToCart('Spring Rolls', './images/Side-dish-2.jpg',170)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Spring rolls are a popular appetizer in Asian cuisine, consisting of a thin pastry wrapper filled with a variety of ingredients such as vegetables, meat, and sometimes noodles. They are typically fried until crispy, resulting in a golden brown exterior with a flavorful filling.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-9.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Pav Bhaji</p>
+                                <p class="price">₹170</p>
+                                <button class="add-to-cart" onclick="addToCart('Pav Bhaji', './images/Side-dish-9.jpg',170)">+</button>
+                            </div>
+                            <h6 class="description">Pav Bhaji is a popular street food dish from Maharashtra, India, that has gained widespread popularity across the country and beyond.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-10.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Paneer Tikka</p>
+                                <p class="price">₹150</p>
+                                <button class="add-to-cart" onclick="addToCart('Paneer Tikka', './images/Side-dish-10.jpg',150)">+</button>
+                            </div>
+                            <h6 class="description">Paneer tikka is a vegetarian snack made from marinated paneer (Indian cheese) cubes skewered and grilled or baked until charred and aromatic. It's often served with mint chutney and lemon wedges.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-right-part">
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-5.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Veg Burger</p>
+                                <p class="price">₹200</p>
+                                <button class="add-to-cart" onclick="addToCart('Veg Burger', './images/Side-dish-5.jpg',200)">+</button>
+                            
+                            </div>
+                            <h6 class="description">A burger is a sandwich consisting of a cooked patty, usually made from ground beef, though there are vegetarian and vegan options available, sandwiched between two halves of a soft bun. Burgers are often topped with lettuce, tomato, onion, cheese, pickles, and condiments such as ketchup, mustard, and mayonnaise. </h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-3.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Pizza</p>
+                                <p class="price">₹300</p>
+                                <button class="add-to-cart" onclick="addToCart('Pizza', './images/imagemain.jpg',300)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Pizza is a classic Italian dish consisting of a round, flattened dough topped with tomato sauce, cheese, and various toppings, which may include meats, vegetables, and herbs. It is typically baked in an oven until the crust is crispy and the cheese is melted and bubbly. </h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-4.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Chilly Garlic Noodles</p>
+                                <p class="price">₹180</p>
+                                <button class="add-to-cart" onclick="addToCart('Chilly Garlic Noodles', './images/Side-dish-4.jpg',180)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Chilly garlic noodles are a spicy and flavorful noodle dish often found in Asian cuisine. They feature stir-fried noodles tossed with garlic, chili peppers, and other seasonings such as soy sauce, vinegar, and sesame oil. Often, they are combined with vegetables, meats, or seafood, creating a dish with a bold and aromatic taste profile.</h6>
+                        </div>                        
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-7.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Green Salad</p>
+                                <p class="price">₹180</p>
+                                <button class="add-to-cart" onclick="addToCart('Green Salad', './images/Side-dish-7.jpg',180)">+</button>
+                            
+                            </div>
+                            <h6 class="description"> A simple green salad made with fresh lettuce, cucumber, tomatoes, onions, and carrots can serve as a refreshing side dish to balance the richness of Indian curries and rice dishes.</h6>
+                        </div>                        
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/Side-dish-8.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Pani Puri/Golgappa</p>
+                                <p class="price">₹100</p>
+                                <button class="add-to-cart" onclick="addToCart('Pani Puri/Golgappa', './images/Side-dish-8.jpg',180)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Pani puri, also known as golgappa, is a popular street food snack consisting of hollow, crispy puris filled with spicy, tangy water (pani), tamarind chutney, potatoes, chickpeas, and chaat masala.</h6>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- desert----------------- -->
+        <div class="menu">
+            <div class="switcher">
+                <div class="switcher-bar">
+                    <p>Desserts</p>
+                    <label onclick="dessertDrinkToggle" class="switch-2" id="dessertDrinkToggle">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <p>Drinks</p>
+                </div>
+            </div>
+            <div class="menu-part-2" id="desserts">
+                <div class="menu-left-part">
+                    <div class="menu-card">
+                        <img src="./images/desert1.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Chocolate Cupcake</p>
+                                <p class="price">₹150</p>
+                                <button class="add-to-cart" onclick="addToCart('Chocolate Cupcake','./images/desert1.jpg',150)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Soft and spongy milk-solid balls soaked in sugar syrup, flavored with cardamom and rose water.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/desert2.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Strawberry Crumble</p>
+                                <p class="price">₹100</p>
+                                <button class="add-to-cart" onclick="addToCart('Strawberry Crumble', './images/desert2.jpg',100)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Delicate cottage cheese dumplings cooked in sugar syrup, offering a burst of sweetness in every bite.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/desert3.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Chocolate Moose</p>
+                                <p class="price">₹80</p>
+                                <button class="add-to-cart" onclick="addToCart('Chocolate Moose', './images/desert3.jpg',80)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Creamy and luscious flattened cottage cheese dumplings immersed in thickened sweetened milk, garnished with saffron and pistachios.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-right-part">
+                    <div class="menu-card">
+                        <img src="./images/desert4.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Berry Tart</p>
+                                <p class="price">₹100</p>
+                                <button class="add-to-cart" onclick="addToCart('Berry Tart', './images/desert4.jpg',100)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Rich and creamy frozen dessert made from thickened milk, flavored with cardamom, saffron, and nuts, served on a stick for a refreshing treat.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/desert5.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Waffles</p>
+                                <p class="price">₹200</p>
+                                <button class="add-to-cart" onclick="addToCart('Waffles', './images/desert5.jpg',200)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Traditional Indian dessert made from grated carrots cooked in ghee, milk, and sugar, flavored with cardamom and garnished with nuts, offering a rich and aromatic sweet treat.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/desert6.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Straberry Glazed Donut</p>
+                                <p class="price">₹250</p>
+                                <button class="add-to-cart" onclick="addToCart('Straberry Glazed Donut', './images/desert6.jpg',250)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Crispy and syrupy spirals of fermented batter, fried to golden perfection, and drenched in sugar syrup, offering a delightful crunch and sweetness.</h6>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="menu-part-2" id="drinks" style="display: none;">
+                <div class="menu-left-part">
+                    <div class="menu-card">
+                        <img src="./images/drink1.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Fresh Juice</p>
+                                <p class="price">₹100</p>
+                                <button class="add-to-cart" onclick="addToCart('Fresh Juice', './images/drink1.jpg',100)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Tangy citrus drink with lime juice, soda water, and a hint of salt.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/drink2.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Oreo Shake</p>
+                                <p class="price">₹250</p>
+                                <button class="add-to-cart" onclick="addToCart('Oreo Shake', './images/drink2.jpg',250)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Aromatic spiced tea with cardamom, cinnamon, cloves, and ginger.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/drink3.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Fresh Lime Soda</p>
+                                <p class="price">₹150</p>
+                                <button class="add-to-cart" onclick="addToCart('Fresh Lime Soda', './images/drink3.jpg',150)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Traditional yogurt-based drink, sweet or salted, for a refreshing treat.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-right-part">
+                    <div class="menu-card">
+                        <img src="./images/drink4.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Strawberry Mocktail</p>
+                                <p class="price">₹270</p>
+                                <button class="add-to-cart" onclick="addToCart('Strawberry Mocktail', './images/drink4.jpg',270)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Creamy shake made from ripe mangoes, milk, and sugar.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/drink5.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Lemon Ice Tea</p>
+                                <p class="price">₹145</p>
+                                <button class="add-to-cart" onclick="addToCart('Lemon Ice Tea', './images/drink5.jpg',145)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Tangy drink with cumin seeds, mint, lemon juice, and black salt.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <img src="./images/drink6.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part">
+                                <p class="name">Dry Martini</p>
+                                <p class="price">₹500</p>
+                                <button class="add-to-cart" onclick="addToCart('Dry Martini', './images/drink6.jpg',500)">+</button>
+                            
+                            </div>
+                            <h6 class="description">Traditional Indian drink with almonds, pistachios, saffron, and milk.</h6>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="special-menu-header">
+                <h2>Recommanded Combos ₹500 Each</h2>
+            </div>
+            <div class="menu-part-3">
+                <div class="menu-left-part-2">
+                    <button class="add-to-cart" onclick="addToCart('Palak Paneer COMBO!!', './images/thali-2.avif',500)">Add to Cart</button>
+                    <div class="menu-card-2">
+                        <img src="./images/main-dish-6.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Palak Paneer</p>
+                            </div>
+                            <h6 class="description"> Soft paneer (Indian cottage cheese) cubes cooked in a creamy spinach gravy with onions, tomatoes, and spices. </h6>
+                        </div>
+                    </div>
+                    <div class="menu-card-2">
+                        <img src="./images/main-dish-3.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Dal Makhni</p>
+                            </div>
+                            <h6 class="description">Dal makhni is a popular Punjabi dish made with black lentils (urad
+                                dal) and kidney beans (rajma) simmered in a creamy tomato-based gravy enriched with
+                                butter and cream.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card-2">
+                        <img src="./images/garlicnaan.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Garlic Naan</p>
+                            </div>
+                            <h6 class="description">Soft and fluffy Indian bread infused with garlic flavor and baked in a tandoor (clay oven).</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card-2">
+                        <img src="./images/gulabjamun.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Gulab Jamun</p>
+                            </div>
+                            <h6 class="description">Soft and spongy milk-solid balls soaked in a sweet syrup flavored with cardamom and rose water. It's a classic Indian dessert that provides a satisfyingly sweet finish to the meal.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card-2">
+                        <img src="./images/mangoshake.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Mango Lassi</p>
+                            </div>
+                            <h6 class="description">A refreshing yogurt-based drink blended with ripe mangoes, yogurt, sugar, and a touch of cardamom. It's creamy, fruity, and helps to cool down the palate after the spicy flavors of the main course.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-right-part-2">
+                    <button class="add-to-cart" onclick="addToCart('Kadhai Paneer COMBO!!', './images/thali-1.avif',500)">Add to Cart</button>
+                    <div class="menu-card-2">
+                        <img src="./images/main-dish-2.avif">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Kadhai Paneer Masala</p>
+                            </div>
+                            <h6 class="description">Cubes of paneer (Indian cottage cheese) cooked in a creamy and mildly spiced tomato-based gravy with butter, cream, onions, and aromatic spices</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card-2">
+                        <img src="./images/dal-tadka.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Dal Tadka</p>
+                            </div>
+                            <h6 class="description">Dal tadka is a flavorful and aromatic lentil dish that hails from North India.The combination of creamy lentils and aromatic spices makes dal tadka a staple in Indian cuisine, loved for its comforting taste and hearty texture.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card-2">
+                        <img src="./images/combo1.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Tandoori Roti</p>
+                            </div>
+                            <h6 class="description">Tandoori Roti is a beloved staple of Indian cuisine, prized for its simplicity, versatility, and delicious flavor. </h6>
+                        </div>
+                    </div>
+                    <div class="menu-card-2">
+                        <img src="./images/combo2.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Gajar ka Halwa</p>
+                            </div>
+                            <h6 class="description">A traditional Indian dessert made from grated carrots cooked in ghee (clarified butter), milk, sugar, and flavored with cardamom and garnished with nuts like almonds and pistachios. It's rich, aromatic, and indulgent.</h6>
+                        </div>
+                    </div>
+                    <div class="menu-card-2">
+                        <img src="./images/combo3.jpg">
+                        <div class="menu-part-content">
+                            <div class="content-part-2">
+                                <p class="name">Masala Chai</p>
+                            </div>
+                            <h6 class="description">A classic Indian spiced tea made by brewing black tea with a mixture of aromatic spices such as cardamom, cinnamon, cloves, and ginger. It's simmered with milk and sweetened with sugar to create a rich, flavorful, and comforting drink. </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-main">
+        <footer class="footer">
+    
+            <div class="about-us-container">
+        
+                <div class="about-us-text">
+        
+                    <div class="about-firstcolumn">
+                        <h2>Our Facilities</h2>
+                        <ul>
+                            <li>
+                                <a href="./home.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="./AboutUs.html">About</a>
+                            </li>
+                            <li>
+                                <a href="./menu.html">Menu</a>
+                            </li>
+                            <li>
+                                <a href="./contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="./Journal.html">Journal</a>
+                            </li>
+                            <li>
+                                <a href="./Reservation.html">Reservation</a>
+                            </li>
+            
+                        </ul>
+                    </div>
+        
+                    <div class="about-secondcolumn">
+                        <a href="./home.html" class="logo">
+                            <img src="./images/logo.png" height="200px" alt="Delixio" class="logo-light">
+                        </a>
+                    </div>
+        
+                    <div class="about-thirdcolumn">
+            
+                        <h2>Contact Us</h2>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-mobile"></i>&emsp;
+                                <span>Phone:</span>
+                                &emsp;+919876543210
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>&emsp;
+                                <span>Landline:</span>
+                                &emsp;(011)-2xxx-xxxx
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>&emsp;
+                                <span>Email:</span>
+                                &emsp;dishdiary123@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                
+                </div> 
+        
+                <div class="follow-icons">
+                        <div class="about-icon-container">
+                            <ul>
+                                <li class="instagram"><i class="fa-brands fa-instagram icon1 icon"></i></li>
+                                <li class="twitter"><i class="fa-brands fa-twitter icon2 icon"></i></li>
+                                <li class="youtube"><i class="fa-brands fa-youtube icon3 icon"></i></li>
+                                <li class="facebook"><i class="fa-brands fa-facebook icon4 icon"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                
+        
+            </div>
+        
+        </footer>
+    
+    </section>
+    <script src="menu.js"></script>
+    <script>
+        function showCart() {
+          // Redirect to the desired page
+          window.location.href = "exp2.html";
+        }
+      
+      </script>
+      <script>
+        window.onload = function() {
+            updateTotalQuantity();
+        };
+        // Function to add product to cart
+        function addToCart(itemName, itemImage, itemPrice) {
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+      
+            var existingItemIndex = cartItems.findIndex(item => item.name === itemName);
+            if (existingItemIndex !== -1) {
+                cartItems[existingItemIndex].quantity++;
+            } else {
+                cartItems.push({ name: itemName, quantity: 1, image: itemImage, price:itemPrice });
+            }
+      
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            updateTotalQuantity();
+      
+        }
+    
+        function updateTotalQuantity() {
+        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        var totalQuantity = 0;
+        for (var i = 0; i < cartItems.length; i++) {
+            totalQuantity += cartItems[i].quantity;
+        }
+        // Assuming you have a DOM element with id 'totalQuantityDisplay' to display the total quantity
+        document.getElementById('totalQuantityDisplay').innerText = totalQuantity;
+    }
+      
+        </script>
+        
+</body>
+</html>
